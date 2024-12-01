@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Comparison Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🌟 Cryptocurrency Comparison Tool</h1>
+    </header>
+    <main class="container">
+        <!-- Preferences Section -->
+        <section class="preferences">
+            <label for="sorting-options">Sort By:</label>
+            <select id="sorting-options" onchange="updateSorting()">
+                <option value="price">Price</option>
+                <option value="market_cap">Market Cap</option>
+                <option value="price_change">Price Change (24h)</option>
+            </select>
+            <button id="show-favorites" onclick="toggleFavorites()">❤️ Show Favorites</button>
+        </section>
+
+        <div id="crypto-data" class="crypto-list"></div>
+
+        <div class="selection-limit-message" id="selection-warning"></div>
+
+        <button id="compare-button" class="primary-button">Compare Selected Cryptos</button>
+
+        <section id="comparison-section" class="comparison-section">
+            <h2>📊 Selected Cryptocurrencies</h2>
+            <div id="comparison-list" class="comparison-list"></div>
+        </section>
+
+        <section id="favorites-section" class="favorites-section" style="display:none;">
+            <h2>❤️ Favorite Cryptocurrencies</h2>
+            <div id="favorites-list" class="favorites-list"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 CryptoTool. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
